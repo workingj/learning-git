@@ -1,8 +1,9 @@
 # GIT
 
 - [GIT](#git)
+    - [Usefull Overview](#usefull-overview)
     - [Configure Git](#configure-git)
-    - [Set the default Editor](#set-the-default-editor)
+    - [SSH](#ssh)
     - [Create a new local repository](#create-a-new-local-repository)
     - [Branches](#branches)
     - [Add one or more files to staging](#add-one-or-more-files-to-staging)
@@ -15,8 +16,14 @@
     - [Undo local changes](#undo-local-changes)
     - [Tipps](#tipps)
 
+## Usefull Overview
+
+![Git Ebenen](git_ebenen.png)
+
 
 ## Configure Git
+
+### User Config
 
 ```bash
 $ git config --global user.name "name"
@@ -24,10 +31,38 @@ $ git config --global user.name "name"
 $ git config --global user.email <mail adress>
 ```
 
-## Set the default Editor
+### Set the default Editor
+
 ```bash
 $ git config --global core.editor "code --wait"
 ```
+
+## SSH
+
+### SSH Key für Github.com generieren
+
+```bash
+$ ssh-keygen -t ed25519 -C "adress@server"
+```
+
+### Kopieren des SSH-Keys in den Zwischenspeicher und bei Github einfügen
+
+```bash
+$ clip < ~/.ssh/id_ed25519.pub
+```
+
+### SSH Zugang Testen & Fingerprint vergleichen:
+
+```bash
+$ ssh -T git@github.com
+```
+
+    SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s (RSA)
+    SHA256:br9IjFspm1vxR3iA35FWE+4VTyz1hYVLIE2t1/CeyWQ (DSA – veraltet)
+    SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM (ECDSA)
+    SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU (Ed25519)
+
+
 
 ## Create a new local repository
 ```bash
