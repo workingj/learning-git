@@ -226,4 +226,5 @@ $ git fetch origin git reset --hard origin/master
 - Nicht zu viel Zeit lassen bis zum Pull request damit sich nciht zu viele Changes aufstauen
 - Locales mergen von remotechanges in main in eigene branches um mit aktueller Version zu arbeiten
 - mit Team absprechen das es pullrequests gab auf main und jeder seinen working branches updated
+- dav als mein branch nutzen und nur sichere änderungen in main mergen, (second layer of protection)
 
